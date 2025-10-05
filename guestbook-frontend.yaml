@@ -15,11 +15,11 @@ spec:
         app: guestbook
         tier: frontend
     spec:
+      imagePullSecrets:
+        - name: acr-secret       # <-- asegúrate que esté aquí, dentro del spec del template
       containers:
       - name: php-redis
-        image: parcialacr20866.azurecr.io/guestbook:v5
+        image: parcialacr20866.azurecr.io/guestbook:v8
         imagePullPolicy: Always
         ports:
         - containerPort: 80
-      imagePullSecrets:
-      - name: acr-secret
