@@ -17,7 +17,9 @@ spec:
     spec:
       containers:
       - name: php-redis
-        image: parcialacr20866.azurecr.io/guestbook:v4
+        image: parcialacr20866.azurecr.io/guestbook:v5
         imagePullPolicy: Always
         ports:
         - containerPort: 80
+      imagePullSecrets:
+      - name: acr-secret
