@@ -19,7 +19,10 @@ spec:
     spec:
       containers:
       - name: slave
-        image: parcialacr20866.azurecr.io/redis:6.0.5
+        image: redis:6.0.5  # ← Cambia esto, usa la imagen oficial
+        env:
+        - name: GET_HOSTS_FROM
+          value: dns
         ports:
         - containerPort: 6379
 ---
