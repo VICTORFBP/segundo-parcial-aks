@@ -1,0 +1,14 @@
+# Guardar como guestbook-frontend-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: guestbook-frontend
+  namespace: guestbook
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: guestbook
+    tier: frontend
