@@ -1,0 +1,10 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfplan
+
+# Archivos grandes y temporales
+*.exe
+*.zip
+*.tar.gz
